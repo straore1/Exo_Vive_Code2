@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galerie de produits</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <h1>Notre galerie de produits</h1>
+    <p>Découvrez notre sélection</p>
+    <button id="themeButton">🌙 Mode sombre</button>
+  </header>
+
+  <main class="gallery">
+    <article class="card">
+      <img src="images/casque-audio.jpg"
+           alt="Casque audio">
+      <div class="content">
+        <h2>Casque audio</h2>
+        <p>Un son immersif et confortable.</p>
+        <p class="price">25 000 FCFA</p>
+        <button>Acheter</button>
+      </div>
+    </article>
+
+    <article class="card">
+      <img src="images/montre-elegante.jpg"
+           alt="Montre élégante">
+      <div class="content">
+        <h2>Montre élégante</h2>
+        <p>Un style moderne au quotidien.</p>
+        <p class="price">35 000 FCFA</p>
+        <button>Acheter</button>
+      </div>
+    </article>
+
+    <article class="card">
+      <img src="images/appareil-photo.jpg"
+           alt="Appareil photo">
+      <div class="content">
+        <h2>Appareil photo</h2>
+        <p>Capturez vos meilleurs souvenirs.</p>
+        <p class="price">80 000 FCFA</p>
+        <button>Acheter</button>
+      </div>
+    </article>
+  </main>
+
+  <script>
+    const themeButton = document.getElementById("themeButton");
+
+    themeButton.addEventListener("click", function () {
+      document.body.classList.toggle("dark");
+
+      if (document.body.classList.contains("dark")) {
+        themeButton.textContent = "☀️ Mode clair";
+      } else {
+        themeButton.textContent = "🌙 Mode sombre";
+      }
+    });
+  </script>
+</body>
+</html>
